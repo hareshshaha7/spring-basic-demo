@@ -4,9 +4,27 @@
 <beans>
 	<bean id="triangle" class="com.haresh.spring.Triangle">
 		<property name="type" value="Equilateral"></property>
+		<property name="a" ref="point1"></property>
+		<property name="b" ref="point2"></property>
+		<property name="c" ref="point3"></property>
 	</bean>
 	
 	<bean id="triangle1" class="com.haresh.spring.Triangle">
 		<constructor-arg value="Bilateral"></constructor-arg>
+	</bean>
+	
+	<bean id="point1" class="com.haresh.spring.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	<bean id="point2" class="com.haresh.spring.Point">
+		<property name="x" value="-20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	<bean id="point3" class="com.haresh.spring.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="20"></property>
 	</bean>
 </beans>
