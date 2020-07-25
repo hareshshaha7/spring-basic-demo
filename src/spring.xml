@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="triangle" class="com.haresh.spring.Triangle">
+		<property name="type" value="Equilateral"></property>
+	</bean>
+	
+	<bean id="triangle1" class="com.haresh.spring.Triangle">
+		<constructor-arg value="Bilateral"></constructor-arg>
+	</bean>
+</beans>
