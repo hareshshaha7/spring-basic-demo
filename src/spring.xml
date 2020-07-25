@@ -4,9 +4,9 @@
 <beans>
 	<bean id="triangle" class="com.haresh.spring.Triangle">
 		<property name="type" value="Equilateral"></property>
-		<property name="a" ref="point1"></property>
-		<property name="b" ref="point2"></property>
-		<property name="c" ref="point3"></property>
+		<property name="pointA" ref="point1"></property>
+		<property name="pointB" ref="point2"></property>
+		<property name="pointC" ref="point3"></property>
 	</bean>
 	
 	<bean id="triangle1" class="com.haresh.spring.Triangle">

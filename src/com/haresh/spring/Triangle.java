@@ -3,9 +3,9 @@ package com.haresh.spring;
 public class Triangle {
 	
 	private String type;
-	private Point a;
-	private Point b;
-	private Point c;
+	private Point pointA;
+	private Point pointB;
+	private Point pointC;
 	
 	public Triangle() {
 	}
@@ -22,33 +22,32 @@ public class Triangle {
 		this.type = type;
 	}
 
-	
-	public Point getA() {
-		return a;
+	public Point getPointA() {
+		return pointA;
 	}
 
-	public void setA(Point a) {
-		this.a = a;
+	public void setPointA(Point pointA) {
+		this.pointA = pointA;
 	}
 
-	public Point getB() {
-		return b;
+	public Point getPointB() {
+		return pointB;
 	}
 
-	public void setB(Point b) {
-		this.b = b;
+	public void setPointB(Point pointB) {
+		this.pointB = pointB;
 	}
 
-	public Point getC() {
-		return c;
+	public Point getPointC() {
+		return pointC;
 	}
 
-	public void setC(Point c) {
-		this.c = c;
+	public void setPointC(Point pointC) {
+		this.pointC = pointC;
 	}
 
 	public void draw() {
-		System.out.println(getType() + " Triangle Drawn, with co-ordinates "+ a +", "+ b +", "+ c);
+		System.out.println(getType() + " Triangle Drawn, with co-ordinates "+ pointA +", "+ pointB +", "+ pointC);
 	}
 
 }
