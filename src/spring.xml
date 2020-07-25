@@ -32,6 +32,33 @@
 	
 	<alias name="point1" alias="zeroPoint"/>
 
+	<bean id="point2" class="com.haresh.spring.Point">
+		<property name="x" value="10"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	
+	<bean id="point3" class="com.haresh.spring.Point">
+		<property name="x" value="10"></property>
+		<property name="y" value="10"></property>
+	</bean>
+	
+	
+	<bean id="point4" class="com.haresh.spring.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="10"></property>
+	</bean>
+	
+	<bean id="rectangle" class="com.haresh.spring.Rectangle">
+		<property name="points">
+			<list>
+				<ref bean="zeroPoint"/>
+				<ref bean="point2"/>
+				<ref bean="point3"/>
+				<ref bean="point4"/>
+			</list>
+		</property>
+	</bean>
 
 
 </beans>

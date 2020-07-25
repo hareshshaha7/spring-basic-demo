@@ -29,6 +29,9 @@ public class Drawing {
 		Triangle triangle1 = (Triangle)context.getBean("triangle1");
 		triangle1.draw();
 
+		System.out.println();
+		Rectangle rectangle = (Rectangle)context.getBean("rectangle");
+		System.out.println(rectangle);
 	}
 
 }
