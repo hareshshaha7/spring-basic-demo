@@ -25,6 +25,7 @@ public class Drawing {
 		Triangle triangle = (Triangle)context.getBean("triangle");
 		triangle.draw();
 		
+		System.out.println();
 		Triangle triangle1 = (Triangle)context.getBean("triangle1");
 		triangle1.draw();
 

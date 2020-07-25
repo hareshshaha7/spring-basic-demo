@@ -47,7 +47,7 @@ public class Triangle {
 	}
 
 	public void draw() {
-		System.out.println(getType() + " Triangle Drawn, with co-ordinates "+ pointA +", "+ pointB +", "+ pointC);
+		System.out.println(getType() + " Triangle Drawn, with following co-ordinates \n"+ pointA +", "+ pointB +", "+ pointC);
 	}
 
 }
