@@ -1,10 +1,10 @@
 package com.haresh.spring;
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
+//import org.springframework.beans.factory.BeanFactory;
+//import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.FileSystemResource;
+//import org.springframework.core.io.FileSystemResource;
 
 public class Drawing {
 
@@ -25,13 +25,14 @@ public class Drawing {
 		Triangle triangle = (Triangle)context.getBean("triangle");
 		triangle.draw();
 		
-		System.out.println();
 		Triangle triangle1 = (Triangle)context.getBean("triangle1");
 		triangle1.draw();
 
-		System.out.println();
 		Rectangle rectangle = (Rectangle)context.getBean("rectangle");
 		System.out.println(rectangle);
+		
+		Rectangle rectangle2 = (Rectangle)context.getBean("rectangle2");
+		System.out.println(rectangle2);
 	}
 
 }

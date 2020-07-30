@@ -5,14 +5,14 @@
 	<bean id="triangle" class="com.haresh.spring.Triangle">
 		<property name="type" value="Equilateral"></property>
 		<property name="pointA" ref="zeroPoint"></property>
-		
+
 		<property name="pointB">
 			<bean class="com.haresh.spring.Point">
 				<property name="x" value="-20"></property>
 				<property name="y" value="0"></property>
 			</bean>
 		</property>
-		
+
 		<property name="pointC">
 			<bean class="com.haresh.spring.Point">
 				<property name="x" value="0"></property>
@@ -29,33 +29,51 @@
 		<property name="x" value="0"></property>
 		<property name="y" value="0"></property>
 	</bean>
-	
-	<alias name="point1" alias="zeroPoint"/>
+
+	<alias name="point1" alias="zeroPoint" />
 
 	<bean id="point2" class="com.haresh.spring.Point">
 		<property name="x" value="10"></property>
 		<property name="y" value="0"></property>
 	</bean>
-	
-	
+
+
 	<bean id="point3" class="com.haresh.spring.Point">
 		<property name="x" value="10"></property>
 		<property name="y" value="10"></property>
 	</bean>
-	
-	
+
+
 	<bean id="point4" class="com.haresh.spring.Point">
 		<property name="x" value="0"></property>
 		<property name="y" value="10"></property>
 	</bean>
-	
+
 	<bean id="rectangle" class="com.haresh.spring.Rectangle">
 		<property name="points">
 			<list>
-				<ref bean="zeroPoint"/>
-				<ref bean="point2"/>
-				<ref bean="point3"/>
-				<ref bean="point4"/>
+				<ref bean="zeroPoint" />
+				<ref bean="point2" />
+				<ref bean="point3" />
+				<ref bean="point4" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="parentReactangle" class="com.haresh.spring.Rectangle" abstract="true">
+		<property name="points">
+			<list>
+				<ref bean="zeroPoint" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="rectangle2" class="com.haresh.spring.Rectangle" parent="parentReactangle">
+		<property name="points">
+			<list merge="true">
+				<ref bean="point2" />
+				<ref bean="point3" />
+				<ref bean="point4" />
 			</list>
 		</property>
 	</bean>
